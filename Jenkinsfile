@@ -4,7 +4,11 @@ pipeline {
         stage('build') {
             steps {
                 bat 'mvn --version'
-                dir("quickstart")
+                bat '''
+                    echo "Buils starting..."'
+                    CD quickstart
+                    cd
+                '''
                 bat 'mvn clean install verify'
             }
         }
