@@ -4,7 +4,9 @@ pipeline {
         stage('build') {
             steps {
                 bat 'mvn --version'
-                cd quickstart
+                dir("quickstart") {
+                    sh "pwd"
+                }
                 bat 'mvn clean install verify'
             }
         }
