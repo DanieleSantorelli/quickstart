@@ -5,7 +5,7 @@ pipeline {
             steps {
                 bat 'mvn --version'
                 dir("quickstart") {
-                    sh "pwd"
+                    bat "pwd"
                 }
                 bat 'mvn clean install verify'
             }
