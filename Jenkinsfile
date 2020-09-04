@@ -7,7 +7,7 @@ pipeline {
                 bat '''
                     echo "Buils starting..."'
                     CD quickstart
-                    'mvn clean install verify'
+                    mvn clean install verify
                 '''
             }
         }
